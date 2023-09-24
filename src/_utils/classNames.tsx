@@ -10,7 +10,7 @@
   classes({ foo: true, bar: true }); // => 'foo bar'
   let arr = ['b', { c: true, d: false }]; classes(...arr); // => 'b c'
 * */
-const classes = (...args) => {
+const classes = (...args: any[]) => {
   const flattenedArray = args.flat();
   const n = flattenedArray.length;
   const newArray = [];
